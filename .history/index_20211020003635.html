@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>My Lonely Life</title>
+	
+	<!-- Import Font -->
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<!-- Default CSS -->
+	<link href="./lib/default.css" type="text/css" rel="stylesheet">
+	
+	<!-- Script Lib -->
+	<script type="text/javascript" src="./lib/jquery.js"></script>
+	<script type="text/javascript" src="./lib/garden.js"></script>
+	
+	<!-- Font -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<!-- MUSIC -->
+	<audio autoplay="autopaly">
+		<source src="./music/sorry.mp3" type="audio/mp3">
+	</audio>  
+
+	<div id="mainDiv">
+	
+		<!--- TEXT [EDIT ONLY] -->
+		<div id="content" style="width: 1160px; height: 625px; margin-top: 52px; margin-left: 220px;">
+			<div id="code" style="margin-top: 62.5px;">
+			
+				<p style="font-size: 20px;">- Tao chúc mài này mãi xinh đẹp, luôn là bông hoa thơm trong vườn hoa ngát hương. Và trên con đường kiếm tìm hạnh phúc sẽ tìm được một tình yêu ngọt ngào, phù hợp với chính mình!</p>
+
+				<p style="font-size: 20px;">- Chúc mài một ngày 20/10 thật là ý nghĩa, vui tươi, ngập tràn hạnh phúc.</p>
+
+				<p style="font-size: 20px;">
+					LẤP KHOẢNG TRỐNG NÀY <br>
+					Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền Khôi Nguyễn Tiền 
+				</p>
+			</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+			<div id="loveHeart">
+				<canvas id="garden" width="670" height="625"></canvas>
+				<div id="words">
+					<div id="messages">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<br>
+						<div id="elapseClockr">&nbsp;&nbsp;&nbsp;&nbsp;<span class="digit"></span>  <span class="digit"></span> <span class="digit"><br>&nbsp;&nbsp;</span>  <span class="digit"></span> </div>
+					</div>
+					
+					<div id="loveu">
+						<br>
+						<!-- <div class="signature">- Nguyễn Tiền Khôi</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--- END TEXT [EDIT ONLY] -->
+		
+		<!-- COPYRIGHT -->
+		<div style="text-align:center;margin:0px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+		<p><b></b></p>
+	</div>
+	
+	<!-- Time & Canvas -->
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var nolovetime = new Date();
+		// nolovetime.setFullYear(2021, 11, 9); // (years, month, days)
+		nolovetime.setHours(0);
+		nolovetime.setMinutes(0);
+		nolovetime.setSeconds(0);
+		nolovetime.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 100);
+
+			timeElapse(nolovetime);
+			setInterval(function () {
+				timeElapse(nolovetime);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+
+</body></html>

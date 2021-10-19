@@ -1,0 +1,104 @@
+<!-- 
+Author: 武侠
+Edited: Vy Nghia
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>My Lonely Life</title>
+	
+	<!-- Import Font -->
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<!-- Default CSS -->
+	<link href="./lib/default.css" type="text/css" rel="stylesheet">
+	
+	<!-- Script Lib -->
+	<script type="text/javascript" src="./lib/jquery.js"></script>
+	<script type="text/javascript" src="./lib/garden.js"></script>
+	
+	<!-- Font -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<!-- MUSIC -->
+	<audio autoplay="autopaly">
+		<source src="music/sorry.mp3" type="audio/mp3">
+	</audio>  
+
+	<div id="mainDiv">
+	
+		<!--- TEXT [EDIT ONLY] -->
+		<div id="content" style="width: 1160px; height: 625px; margin-top: 52px; margin-left: 220px;">
+			<div id="code" style="margin-top: 62.5px;">
+			
+				<img src="" alt="">
+
+			</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></div>
+			<div id="loveHeart">
+				<canvas id="garden" width="670" height="625"></canvas>
+				<div id="words">
+					<div id="messages">
+						&nbsp;&nbsp;Anh đã chờ em &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<br> chờ em trong<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<br>
+						<div id="elapseClock">&nbsp;&nbsp;&nbsp;&nbsp;<span class="digit">333</span> ngày <span class="digit">17</span> giờ <span class="digit"><br>&nbsp;&nbsp;07</span> phút <span class="digit">33</span> giây</div>
+					</div>
+					
+					<div id="loveu">
+						Sống trong cô đơn.<br>
+						<div class="signature">- Vy Nghĩa</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--- END TEXT [EDIT ONLY] -->
+		
+		<!-- COPYRIGHT -->
+		<div style="text-align:center;margin:0px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+		<p>© 2017 Vy Nghia</b></p>
+	</div>
+	
+	<!-- Time & Canvas -->
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var nolovetime = new Date();
+		nolovetime.setFullYear(2021, 10, 10); // (years, month, days)
+		nolovetime.setHours(0);
+		nolovetime.setMinutes(0);
+		nolovetime.setSeconds(0);
+		nolovetime.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 100);
+
+			timeElapse(nolovetime);
+			setInterval(function () {
+				timeElapse(nolovetime);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+
+</body></html>
